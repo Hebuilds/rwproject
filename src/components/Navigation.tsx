@@ -83,10 +83,10 @@ const Navigation: React.FC<NavigationProps> = ({ isLoaded, navScrolled, setMobil
       {/* Instagram/Burger CTA block */}
       <div className="flex items-center gap-4">
         <a
-          href="https://instagram.com/rw.project_"
+href="https://instagram.com/rw.project_"
           target="_blank"
           rel="noopener noreferrer"
-          className="interactive-hover p-2 rounded-full border border-white/10 hover:border-gold hover:text-gold text-white/70 transition-all"
+          className="interactive-hover hidden lg:flex p-2 rounded-full border border-white/10 hover:border-gold hover:text-gold text-white/70 transition-all"
           title="Follow our Instagram"
         >
           <Instagram className="w-4 h-4" />

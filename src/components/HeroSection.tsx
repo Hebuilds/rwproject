@@ -70,24 +70,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, scrollToSection }) 
       
       <div className="w-full max-w-5xl mx-auto relative z-10 space-y-8 md:space-y-11">
         {/* Elegant Ticker Kicker Badge */}
-        <div 
-          style={{
-            opacity: isLoaded ? 0.8 : 0,
-            transform: isLoaded ? "translateY(0)" : "translateY(15px)",
-            transition: "transform 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s"
-          }}
-          className="inline-flex flex-wrap items-center gap-x-3 gap-y-1.5 border border-gold/15 px-4 py-1.5 rounded-full bg-gold/5 backdrop-blur-md"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-          <span className="text-[9px] tracking-[0.3em] uppercase font-mono font-bold text-gold-light">
-            ONE TICKET. TWO EXPERIENCES.
-          </span>
-          <span className="hidden sm:inline text-white/20">•</span>
-          <span className="text-[9px] tracking-[0.3em] uppercase font-mono text-white/50">
-            FROM THE SCREEN TO THE AFTERS
-          </span>
-        </div>
-
+        
         {/* Balanced Display Headline: Powerful but Breathable */}
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-black tracking-tight uppercase leading-[0.95] text-white">
           <span 

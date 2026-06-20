@@ -16,7 +16,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ mobileMenuOpen, closeMobileMenu
   return (
     <div
       className={`fixed inset-0 z-[490] bg-black/98 flex flex-col justify-between p-8 transition-transform duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+        mobileMenuOpen ? "translate-y-0 visible" : "-translate-y-[120%] invisible"
       }`}
       aria-label="Mobile Navigation"
     >
@@ -49,37 +49,37 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ mobileMenuOpen, closeMobileMenu
       <div className="space-y-6 my-auto pt-8 font-bold">
         <button
           onClick={() => scrollToSection("events-section")}
-          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold transition-all"
+          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold active:text-gold active:scale-95 transition-all duration-150"
         >
           Events
         </button>
         <button
           onClick={() => scrollToSection("casting-section")}
-          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold transition-all"
+          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold active:text-gold active:scale-95 transition-all duration-150"
         >
           Cast ID
         </button>
         <button
           onClick={() => scrollToSection("collection-section")}
-          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold transition-all"
+          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold active:text-gold active:scale-95 transition-all duration-150"
         >
           Collection
         </button>
         <button
           onClick={() => scrollToSection("experiences-section")}
-          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold transition-all"
+          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold active:text-gold active:scale-95 transition-all duration-150"
         >
           Movement
         </button>
         <button
           onClick={() => scrollToSection("ticket-compiler-section")}
-          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold transition-all"
+          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold active:text-gold active:scale-95 transition-all duration-150"
         >
           Access Pass
         </button>
         <button
           onClick={() => scrollToSection("community-section")}
-          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold transition-all"
+          className="font-display text-4xl block text-left uppercase text-white font-bold hover:text-gold active:text-gold active:scale-95 transition-all duration-150"
         >
           Collective
         </button>

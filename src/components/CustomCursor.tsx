@@ -24,23 +24,14 @@ export default function CustomCursor() {
     const ring = ringRef.current;
     if (!dot || !ring) return;
 
-    // Initially hide cursor until moved
-    dot.style.opacity = "0";
-    ring.style.opacity = "0";
+// Show cursor immediately — no need to wait for first mouse movement
+    dot.style.opacity = "1";
+    ring.style.opacity = "1";
+    isVisibleRef.current = true;
 
     const onMouseMove = (e: MouseEvent) => {
       mouseRef.current = { x: e.clientX, y: e.clientY };
-      
-      if (!isVisibleRef.current) {
-        isVisibleRef.current = true;
-        dot.style.opacity = "1";
-        ring.style.opacity = "1";
-      }
-
-      // Smoothly update core dot translation
-      dot.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) scale(${isHoveredRef.current ? 1.5 : 1})`;
     };
-
     const onMouseLeave = () => {
       isVisibleRef.current = false;
       dot.style.opacity = "0";
@@ -59,6 +50,9 @@ export default function CustomCursor() {
 
     let animationId: number;
     const lerp = () => {
+      // Dot follows the real cursor every frame (smooth, capped to screen refresh rate)
+      dot.style.transform = `translate3d(${mouseRef.current.x}px, ${mouseRef.current.y}px, 0) scale(${isHoveredRef.current ? 1.5 : 1})`;
+
       const dx = mouseRef.current.x - trailRef.current.x;
       const dy = mouseRef.current.y - trailRef.current.y;
       

@@ -138,12 +138,10 @@ export default function App() {
       requestAnimationFrame(raf);
     }
 
-    const animId = requestAnimationFrame(raf);
-    window.addEventListener("scroll", handleScroll, { passive: true });
+  const animId = requestAnimationFrame(raf);
 
     return () => {
       cancelAnimationFrame(animId);
-      window.removeEventListener("scroll", handleScroll);
       lenis.destroy();
     };
   }, [isLoaded]);
@@ -164,33 +162,34 @@ export default function App() {
     }
   };
 
-  return (
+return (
     <>
       <CustomCursor />
-      
-      {/* Cellular cinematic Film Grain */}
-      <div className="grain" aria-hidden="true" />
 
-      {/* Floating Parallax Glowing Orbs - Soft luxury background light shifts */}
-      <div 
-        ref={orb1Ref}
-        className="orb w-[500px] h-[500px] bg-gold opacity-[0.06] top-[-100px] right-[-100px] will-change-transform" 
-        style={{ transform: "translate3d(0, 0, 0)" }}
-        aria-hidden="true" 
-      />
-      <div 
-        ref={orb2Ref}
-        className="orb w-[350px] h-[350px] bg-gold-light opacity-[0.04] top-[40%] left-[-150px] will-change-transform" 
-        style={{ transform: "translate3d(0, 0, 0)" }}
-        aria-hidden="true" 
-      />
-      <div 
-        ref={orb3Ref}
-        className="orb w-[400px] h-[400px] bg-gold-dark opacity-[0.03] bottom-[15%] right-[-100px] will-change-transform" 
-        style={{ transform: "translate3d(0, 0, 0)" }}
-        aria-hidden="true" 
-      />
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        {/* Cellular cinematic Film Grain */}
+        <div className="grain" aria-hidden="true" />
 
+        {/* Floating Parallax Glowing Orbs - Soft luxury background light shifts */}
+        <div 
+          ref={orb1Ref}
+          className="orb w-[500px] h-[500px] bg-gold opacity-[0.06] top-[-100px] right-[-100px] will-change-transform" 
+          style={{ transform: "translate3d(0, 0, 0)" }}
+          aria-hidden="true" 
+        />
+        <div 
+          ref={orb2Ref}
+          className="orb w-[350px] h-[350px] bg-gold-light opacity-[0.04] top-[40%] left-[-150px] will-change-transform" 
+          style={{ transform: "translate3d(0, 0, 0)" }}
+          aria-hidden="true" 
+        />
+        <div 
+          ref={orb3Ref}
+          className="orb w-[400px] h-[400px] bg-gold-dark opacity-[0.03] bottom-[15%] right-[-100px] will-change-transform" 
+          style={{ transform: "translate3d(0, 0, 0)" }}
+          aria-hidden="true" 
+        />
+      </div>
       <Loader isLoaded={isLoaded} loadProgress={loadProgress} />
 
       <MobileMenu 
