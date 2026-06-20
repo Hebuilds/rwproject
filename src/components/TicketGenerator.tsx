@@ -305,7 +305,7 @@ export default function TicketGenerator() {
             <Ticket className="w-10 h-10 text-white/10 mb-4 animate-pulse" />
             <h5 className="font-display text-[10px] tracking-[0.2em] uppercase font-bold text-white/50 mb-1">Ticket Holder Empty</h5>
             <p className="text-xs text-white/30 max-w-[220px] leading-relaxed">
-              Complete the Access form on the left to compile your golden movement credentials pass.
+              Complete the <B>ACCESS PORTAL<B/> form to compile your golden movement credentials pass.
             </p>
           </div>
         )}

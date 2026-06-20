@@ -69,10 +69,10 @@ const FooterSection: React.FC<FooterSectionProps> = ({ scrollToSection }) => {
           <div className="md:col-span-4 space-y-3">
             <h4 className="text-[10px] font-mono tracking-widest text-gold uppercase font-bold">CONNECTIVITY</h4>
             <p className="text-xs text-white/50 leading-relaxed font-sans">
-              Kigali Main Office / Creative Agura Hub workspace. Support queries via direct <span className="text-gold-light font-bold">sinc.events</span> portal ticketing systems.
+              THIS WEB WAS MADE BY  <span className="text-gold-light font-bold">HIRWA YVES</span> made by love
             </p>
             <div className="text-xs text-white/40 font-mono">
-              Territory: Kigali, Rwanda
+              INSTAGRAM: <a href="https://instagram.com/yves.hw" target="_blank" rel="noopener noreferrer" className="text-gold-light hover:text-gold transition-colors">@Yves.hw</a>
             </div>
           </div>
 
