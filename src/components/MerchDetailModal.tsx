@@ -147,13 +147,13 @@ Please notify me of the serial pickup at Agura Hub/Kigali.`;
                 <span className="block text-[10px] font-mono tracking-widest text-gold uppercase mb-2 font-semibold">SECURE SERIAL PRE-ORDER INQUIRY</span>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <input
+                 <input
                     type="text"
                     required
                     value={buyerName}
                     onChange={(e) => setBuyerName(e.target.value)}
                     placeholder="YOUR FULL NAME"
-                    className="bg-black/50 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white uppercase placeholder-white/20 focus:outline-none focus:border-gold transition-all"
+                    className="bg-black/50 border border-white/10 rounded-xl px-4 py-2.5 text-base text-white uppercase placeholder-white/20 focus:outline-none focus:border-gold transition-all"
                   />
                   <input
                     type="text"
@@ -161,7 +161,7 @@ Please notify me of the serial pickup at Agura Hub/Kigali.`;
                     value={contact}
                     onChange={(e) => setContact(e.target.value)}
                     placeholder="INSTAGRAM ID OR WHATSAPP NO."
-                    className="bg-black/50 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-white/20 focus:outline-none focus:border-gold transition-all"
+                    className="bg-black/50 border border-white/10 rounded-xl px-4 py-2.5 text-base text-white placeholder-white/20 focus:outline-none focus:border-gold transition-all"
                   />
                 </div>
 
