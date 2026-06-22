@@ -1,4 +1,3 @@
-
 export default function App() {
   return (
     <div
@@ -14,10 +13,22 @@ export default function App() {
       }}
     >
       <h1>Website Temporarily Unavailable</h1>
+
       <p>
-        We currently shout down this domain we will be back soon with modification. <br><br>
-          more information contact me on my instagram <a href="https://www.instagram.com/yves.hw/?hl=nl" target="_blank">Yves.hw (web developer)</a> <br><br>
-            made with love :)
+        We currently shut down this domain and will be back soon with modifications.
+        <br />
+        <br />
+        More information contact me on Instagram:
+        <a
+          href="https://www.instagram.com/yves.hw/?hl=nl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}Yves.hw (Web Developer)
+        </a>
+        <br />
+        <br />
+        Made with love :)
       </p>
     </div>
   );
